@@ -17,7 +17,7 @@
 						</xsl:attribute>
 						<failure>
 							<xsl:attribute name="message">
-								<xsl:value-of select="desc"/>
+								<xsl:value-of select="replace(replace(concat('Description: ', desc, ' Solution: ', solution, ' Reference: ', reference), '&lt;p&gt;', ''), '&lt;/p&gt;', ' ')"/>
 							</xsl:attribute>
 						</failure>
 					</testcase>

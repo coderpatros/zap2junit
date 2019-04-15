@@ -20,11 +20,11 @@ thought there would already be a tool to do the conversion.
 Usage
 -----
 
-Any tool capable of transforming an XML file with a XSLT file should do.
+Any tool capable of transforming an XML file with a XSLT 2.0 file should do.
 
-For example xsltproc can be used to generate a file named `junit.xml` from a
+For example libsaxonb-java can be used to generate a file named `junit.xml` from a
 file `zap.xml` like so...
 
-    xsltproc --output junit.xml zap2junit.xsl zap.xml
+    saxonb-xslt -xsl:zap2junit.xsl -s:zap.xml -o:junit.xml
 
 This is what is used in my [docker-zap-scanner](https://github.com/patros/docker-zap-scanner) container.
